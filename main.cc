@@ -1,4 +1,4 @@
-#include "Poisson.hh"
+#include "RandomWalk.hh"
 #include <cstdio>
 
 int main()
@@ -10,8 +10,10 @@ int main()
         return EXIT_FAILURE;
     }
 
-    Poisson rw(3);
+    RandomWalk rw(0.3);
     auto walk = rw.Simulate(10);
+    std::printf("simulated\n");
+    auto ma = MovingAverage(rw, 3);
     for(int i =0; i < walk.size(); ++i)
     {
         std::fprintf(file, "%d %.5f\n", i, walk[i]);
