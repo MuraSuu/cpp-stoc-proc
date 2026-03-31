@@ -1,0 +1,7 @@
+[requires]
+implot/0.17
+[generators]
+CMakeDeps
+CMakeToolchain
+[layout]
+cmake_layout
